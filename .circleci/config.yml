@@ -78,6 +78,6 @@ workflows:
     jobs:
       - config_environnement
       # 
-      # - run_lint:
-      #     requires:
-      #       - config_environnement
+      - run_lint:
+          requires:
+            - config_environnement
