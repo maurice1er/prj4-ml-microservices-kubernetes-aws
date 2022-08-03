@@ -42,8 +42,8 @@ jobs:
           name: run lint
           command: |
             # python3 -m venv ~/.devops
-            ls -la /root/repo
-            . ~/.devops/bin/activate 
+            # ls -la /root/repo/venv
+            . /root/repo/venv/bin/activate 
             cd project-ml-microservice-kubernetes
             make lint 
 
