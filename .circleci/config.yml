@@ -1,4 +1,4 @@
-version: 2
+version: 2.1
 
 jobs:
   build:
@@ -40,4 +40,5 @@ jobs:
           command: |
             . ~/.devops/bin/activate 
             cd project-ml-microservice-kubernetes
-            make lint
+            make lint 
+
