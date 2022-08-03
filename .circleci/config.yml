@@ -55,6 +55,7 @@ jobs:
           command: |
             cd project-ml-microservice-kubernetes 
             ls -la 
+            . ~/.devops/bin/activate 
             make lint 
 
   # - run:
