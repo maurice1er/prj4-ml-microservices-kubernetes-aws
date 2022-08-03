@@ -1,5 +1,20 @@
 version: 2.1
 
+commands:
+  install_dependencies:
+    description: install dependencies
+    steps:
+      - run:
+          name: install dependencies
+          command: |
+            python3 -m venv ~/.devops
+            . ~/.devops/bin/activate 
+            cd project-ml-microservice-kubernetes 
+            make install
+            # Install hadolint
+            wget -O /bin/hadolint https://github.com/hadolint/hadolint/releases/download/v1.16.3/hadolint-Linux-x86_64 &&\
+                chmod +x /bin/hadolint 
+
 jobs:
   config_environnement:
     docker:
@@ -33,18 +48,10 @@ jobs:
       - image: python:3.7.3-stretch
     steps:
       - checkout
-      - restore_cache:
-          keys:
-            - v1-dependencies-{{ checksum "project-ml-microservice-kubernetes/requirements.txt" }}
-            # fallback to using the latest cache if no exact match is found
-            - v1-dependencies-
+      - install_dependencies
       - run:
           name: run lint
           command: |
-            # python3 -m venv ~/.devops
-            # ls -la /root/repo/venv
-            . /root/repo/venv/bin/activate 
-            cd project-ml-microservice-kubernetes
             make lint 
 
   # - run:
