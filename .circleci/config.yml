@@ -40,7 +40,9 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          keys: [ v1-dependencies-{{ checksum "project-ml-microservice-kubernetes/requirements.txt" }} ]
+          keys:
+            - v1-dependencies-{{ checksum "project-ml-microservice-kubernetes/requirements.txt" }}
+            - v1-dependencies-
       - run:
           name: run lint
           command: |
