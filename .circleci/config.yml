@@ -5,7 +5,7 @@ jobs:
     docker:
       - image: python:3.7.3-stretch
 
-    working_directory: ~/prj4-ml-microservices-kubernetes-aws
+    working_directory: ~/repo
 
     steps:
       - run:
