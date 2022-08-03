@@ -54,6 +54,7 @@ jobs:
           name: run lint
           command: |
             cd project-ml-microservice-kubernetes 
+            ls -la 
             make lint 
 
   # - run:
