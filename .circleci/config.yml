@@ -21,6 +21,7 @@ jobs:
           command: |
             pwd 
             ls -la 
+            cd prj4-ml-microservices-kubernetes-aws
 
       # Download and cache dependencies
       - restore_cache:
