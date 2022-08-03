@@ -1,4 +1,8 @@
-[![CircleCI](https://dl.circleci.com/status-badge/img/null/maurice1er/prj4-ml-microservices-kubernetes-aws/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/null/maurice1er/prj4-ml-microservices-kubernetes-aws/tree/main) 
+[![CircleCI](https://dl.circleci.com/status-badge/img/null/maurice1er/prj4-ml-microservices-kubernetes-aws/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/null/maurice1er/prj4-ml-microservices-kubernetes-aws/tree/main)  
+
+
+[![CircleCI](https://app.circleci.com/settings/project/images/success-badge.svg)](https://app.circleci.com/settings/project/images/success-badge.svg)
+
 
 ## Project Overview
 
