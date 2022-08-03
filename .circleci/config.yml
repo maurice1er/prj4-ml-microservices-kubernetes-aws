@@ -5,7 +5,7 @@ jobs:
     docker:
       - image: python:3.7.3-stretch
 
-    # working_directory: ~/repo
+    working_directory: ~/repo
 
     steps:
       - run:
@@ -45,9 +45,9 @@ jobs:
             - ./venv
           key: v1-dependencies-{{ checksum "project-ml-microservice-kubernetes/requirements.txt" }}
 
-      # run lint!
-      - run:
-          name: run lint
-          command: |
-            . venv/bin/activate
-            make lint
+      # # run lint!
+      # - run:
+      #     name: run lint
+      #     command: |
+      #       . venv/bin/activate
+      #       make lint
