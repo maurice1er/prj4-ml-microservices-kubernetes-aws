@@ -15,8 +15,8 @@ jobs:
       - run:
           name: install dependencies
           command: |
-            python3 -m venv devops
-            . devops/bin/activate 
+            python3 -m venv ~/.devops
+            . ~/.devops/bin/activate 
             cd project-ml-microservice-kubernetes 
             make install
             # Install hadolint
@@ -24,7 +24,7 @@ jobs:
                 chmod +x /bin/hadolint
       - save_cache:
           paths:
-            - devops
+            - ~/.devops
           key: v1-dependencies-{{ checksum "project-ml-microservice-kubernetes/requirements.txt" }}
 
   # run lint!
@@ -41,8 +41,8 @@ jobs:
       - run:
           name: run lint
           command: |
-            # python3 -m venv devops
-            . ~/devops/bin/activate 
+            # python3 -m venv ~/.devops
+            . ~/.devops/bin/activate 
             cd project-ml-microservice-kubernetes
             make lint 
 
