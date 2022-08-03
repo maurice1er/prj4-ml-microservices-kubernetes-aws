@@ -47,8 +47,8 @@ jobs:
           name: run lint
           command: |
             ls -la  
-            
-            . ~/.devops/bin/activate 
+
+            # . ~/.devops/bin/activate 
             cd project-ml-microservice-kubernetes
 
             ls -la 
