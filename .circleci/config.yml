@@ -5,7 +5,7 @@ jobs:
     docker:
       - image: python:3.7.3-stretch
 
-    working_directory: ~/repo
+    # working_directory: ~/repo
 
     steps:
       - run:
@@ -21,7 +21,7 @@ jobs:
           command: |
             pwd 
             ls -la 
-            cd project-ml-microservice-kubernetes
+            
 
       # Download and cache dependencies
       - restore_cache:
