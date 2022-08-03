@@ -5,16 +5,22 @@ jobs:
     docker:
       - image: python:3.7.3-stretch
 
-    working_directory: ~/repo
+    working_directory: ~/prj4-ml-microservices-kubernetes-aws
 
     steps:
       - run:
-          name: test path 
+          name: test1 path 
           command: |
             pwd 
             ls -la 
 
-      - checkout
+      - checkout 
+
+      - run:
+          name: test2 path 
+          command: |
+            pwd 
+            ls -la 
 
       # Download and cache dependencies
       - restore_cache:
